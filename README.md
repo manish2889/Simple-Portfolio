@@ -10,7 +10,7 @@
 
 ### 2. Install Dependencies:
 ```
-$ cd portfolio_template
+$ cd Simple-Portfolio
 $ npm install 
 ```
 
@@ -44,5 +44,4 @@ For the basic build settings, it should automatically detect *Create React App*.
 
 You can leave **Base Directory** empty then click on Deploy site.
 
-After the build is complete, the link to the site will be shown at the end of the console output.# Simple-Portfolio
-# Simple-Portfolio
+After the build is complete, the link to the site will be shown at the end of the console output.
