@@ -21,7 +21,7 @@ const skillCategories = [
       { name: 'Hardhat', level: 80 },
       { name: 'Foundry', level: 75 },
       { name: 'Ethers.js', level: 85 },
-      { name: 'Solana', level: 60 },
+      { name: 'Solana', level: 30 },
     ],
   },
   {

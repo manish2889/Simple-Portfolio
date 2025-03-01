@@ -88,7 +88,7 @@ const About = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl font-bold text-textPrimary"
+              className="text-3xl font-bold text-white"
             >
               About Me
             </motion.h2>
@@ -109,7 +109,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-textPrimary text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300"
+                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
               >
                 My journey into the world of blockchain and Web3 began with a fascination for decentralized systems 
                 and their potential to revolutionize the digital landscape. As a computer science student, I've always 
@@ -118,7 +118,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-textPrimary text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300"
+                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
               >
                 Beyond coding, I'm passionate about contributing to the Web3 ecosystem and building solutions that 
                 make blockchain technology more accessible to everyone. I believe in the power of decentralized 
@@ -127,7 +127,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-textPrimary text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300"
+                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
               >
                 When I'm not coding, you'll find me exploring new blockchain protocols, participating in hackathons, 
                 or sharing my knowledge with the developer community through technical articles and open-source 
@@ -140,7 +140,7 @@ const About = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="bg-gradient-to-r from-secondary via-card to-secondary p-8 rounded-lg shadow-card relative overflow-hidden group"
+              className="bg-[#0a192f] p-8 rounded-lg shadow-card relative overflow-hidden group"
             >
               {/* Animated gradient background */}
               <motion.div
@@ -174,7 +174,7 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <motion.div
-                    className="group relative overflow-hidden rounded-lg bg-primary/40 p-6 transition-all duration-300 hover:shadow-highlight"
+                    className="group relative overflow-hidden rounded-lg bg-[#112240] p-6 transition-all duration-300 hover:shadow-highlight"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
@@ -193,18 +193,18 @@ const About = () => {
                         >
                           <FiCode className="text-2xl text-highlight" />
                         </motion.div>
-                        <h4 className="text-xl font-semibold text-textPrimary group-hover:text-highlight transition-colors">
+                        <h4 className="text-xl font-bold text-[#ffffff] group-hover:text-highlight transition-colors tracking-wide">
                           Solana Development
                         </h4>
                       </div>
-                      <p className="text-textPrimary text-lg">
+                      <p className="text-[#ffffff] text-lg font-bold tracking-wide">
                         Building decentralized applications on the fastest blockchain, exploring Solana's unique architecture and ecosystem.
                       </p>
                     </div>
                   </motion.div>
 
                   <motion.div
-                    className="group relative overflow-hidden rounded-lg bg-primary/40 p-6 transition-all duration-300 hover:shadow-highlight"
+                    className="group relative overflow-hidden rounded-lg bg-[#112240] p-6 transition-all duration-300 hover:shadow-highlight"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
@@ -223,11 +223,11 @@ const About = () => {
                         >
                           <FiCpu className="text-2xl text-highlight" />
                         </motion.div>
-                        <h4 className="text-xl font-semibold text-textPrimary group-hover:text-highlight transition-colors">
+                        <h4 className="text-xl font-bold text-[#ffffff] group-hover:text-highlight transition-colors tracking-wide">
                           AI Development
                         </h4>
                       </div>
-                      <p className="text-textPrimary text-lg">
+                      <p className="text-[#ffffff] text-lg font-bold tracking-wide">
                         Creating intelligent solutions with Eliza, focusing on AI integration in blockchain applications.
                       </p>
                     </div>

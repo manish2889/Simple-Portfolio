@@ -205,7 +205,7 @@ const Projects = () => {
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="text-2xl font-bold text-textPrimary group-hover:text-highlight transition-colors duration-300"
+                      className="text-2xl font-bold text-textPrimary/95 group-hover:text-highlight transition-colors duration-300"
                     >
                       {project.title}
                     </motion.h3>
@@ -238,7 +238,7 @@ const Projects = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                    className="text-textPrimary text-lg mb-6 leading-relaxed"
+                    className="text-textPrimary/95 text-lg mb-6 leading-relaxed font-medium"
                   >
                     {project.description}
                   </motion.p>
@@ -258,7 +258,7 @@ const Projects = () => {
                           color: "#64ffda",
                           textShadow: "0 0 8px rgba(100, 255, 218, 0.3)"
                         }}
-                        className="text-textSecondary text-sm font-mono px-3 py-1 rounded-full bg-highlight/5 border border-highlight/10 hover:border-highlight/30 transition-colors"
+                        className="text-textPrimary/90 text-sm font-mono px-3 py-1 rounded-full bg-highlight/5 border border-highlight/10 hover:border-highlight/30 transition-colors"
                       >
                         {tech}
                       </motion.span>
