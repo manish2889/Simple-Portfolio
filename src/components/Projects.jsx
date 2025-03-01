@@ -49,6 +49,22 @@ const projects = [
     github: "https://github.com/manish2889/tokenpulse-ai",
     external: "https://tokenpulse-ai.vercel.app/",
     isComingSoon: false
+  },
+  {
+    title: "Ethereum Block Analyzer with AI Integration",
+    description: "A Next.js-based web application that combines Ethereum blockchain data analysis with AI insights, providing detailed transaction analysis and intelligent interpretations of blockchain activity.",
+    tech: ["Next.js 14", "React 18", "Etherscan API", "Gaia AI API", "Tailwind CSS"],
+    github: "https://github.com/manish2889/gaia-etherscan-ai-project",
+    external: "https://gaia-etherscan-ai-project.vercel.app/",
+    isComingSoon: false
+  },
+  {
+    title: "TokenTap: Web3 Token Faucet Interface",
+    description: "A React-based web application that provides a user-friendly interface for interacting with an Ethereum token faucet smart contract, allowing users to request and manage test tokens on the blockchain.",
+    tech: ["React 18", "Ethers.js", "MetaMask", "Smart Contracts", "CSS Animations"],
+    github: "https://github.com/manish2889/tokentap",
+    external: "https://tokentap.vercel.app/",
+    isComingSoon: false
   }
 ];
 
