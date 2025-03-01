@@ -1,47 +1,12 @@
-# Portfolio Template
+# React + Vite
 
-## Technology Stack & Tools
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- Javascript (React)
-- [Fleek](https://fleek.co/) (Website Deployment)
+Currently, two official plugins are available:
 
-## Setting Up
-### 1. Clone/Download the Repository
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### 2. Install Dependencies:
-```
-$ cd Simple-Portfolio
-$ npm install 
-```
+## Expanding the ESLint configuration
 
-### 3. Start App
-`$ npm start`
-
-## Fleek Deployment
-### 1. Sign in to Fleek.co via GitHub
-
-### 2. Add New Site
-Under Hosting click on **Add New Site**
-
-### 3. Connect with GitHub
-Click on the **Connect with GitHub** button
-
-### 4. Select Repository
-If not shown in the dropdown, you'll want to click near the bottom "**Configure the Fleek app on GitHub**". Configure account, then select the *portfolio_template* repository.
-
-### 5. Configure Deploy Location
-Select *IPFS*, this should be the default selection
-
-### 6. Configure Build Options
-Deploy Settings should be left at default values, make sure the master branch is selected.
-
-For the basic build settings, it should automatically detect *Create React App*. However, make sure the following values are correct:
-
-- **Framework**: Create React App
-- **Docker Image Name**: fleek/create-react-app:node-16
-- **Build Command**: npm install && npm run build
-- **Publish Directory**: build
-
-You can leave **Base Directory** empty then click on Deploy site.
-
-After the build is complete, the link to the site will be shown at the end of the console output.
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
