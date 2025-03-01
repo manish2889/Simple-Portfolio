@@ -1,12 +1,82 @@
-# React + Vite
+# Modern Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive portfolio website built with React, Vite, and Tailwind CSS. Features smooth animations, modern design, and optimal performance.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Clean and professional UI with a dark theme
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Smooth Animations**: Powered by Framer Motion for fluid transitions
+- **Performance Optimized**: Built with Vite for lightning-fast loading
+- **SEO Friendly**: Proper meta tags and semantic HTML
+- **Easy to Customize**: Well-organized code structure
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 4
+- Tailwind CSS 3
+- Framer Motion
+- React Icons
+- React Scroll
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/simple-portfolio.git
+cd simple-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Build for production:
+```bash
+npm run build
+```
+
+## 🛠️ Environment Requirements
+
+- Node.js >= 16.0.0
+- npm >= 7.0.0
+
+## 🎨 Customization
+
+1. **Colors**: Edit `tailwind.config.js` to modify the color scheme
+2. **Content**: Update components in `src/components` to modify content
+3. **Animations**: Adjust animation parameters in individual components
+4. **Styling**: Modify `src/index.css` for global styles
+
+## 📱 Sections
+
+- Hero/Introduction
+- About Me
+- Skills & Technologies
+- Featured Projects
+- Contact
+
+## 🚀 Deployment
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. The build files will be in the `dist` directory
+3. Deploy the `dist` directory to your hosting provider
+
+## 📝 License
+
+MIT License - feel free to use this project for your own portfolio!
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
