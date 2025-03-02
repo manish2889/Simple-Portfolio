@@ -145,7 +145,7 @@ const Projects = () => {
               className="flex items-center gap-4"
             >
               <span className="text-highlight font-mono text-lg">03.</span>
-              <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-textPrimary to-highlight">
+              <h2 className="text-4xl font-bold text-[#ccd6f6]">
                 Featured Projects
               </h2>
             </motion.div>
@@ -167,103 +167,65 @@ const Projects = () => {
                   scale: 1.02,
                   y: -5,
                 }}
-                className="group relative bg-quaternary/80 backdrop-blur-sm p-8 rounded-lg shadow-lg overflow-hidden transform-gpu"
+                className="group relative bg-[#112240] p-6 sm:p-8 rounded-xl shadow-lg overflow-hidden transform-gpu border border-highlight/10 hover:border-highlight/30 transition-all duration-300"
               >
                 {/* Project card background effects */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-highlight/5 via-transparent to-highlight/5"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-highlight/10 via-transparent to-transparent"
-                  animate={{
-                    x: ["0%", "100%"],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
+                <div className="absolute inset-0 bg-gradient-to-br from-highlight/5 via-transparent to-highlight/5 opacity-50" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-gradient-to-r from-highlight/20 to-transparent transition-opacity duration-300" />
 
                 <div className="relative z-10">
-                  <div className="flex items-center gap-4 mb-4">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        delay: index * 0.1
-                      }}
-                    >
-                      <FiFolder className="text-3xl text-highlight" />
-                    </motion.div>
-                    <motion.h3
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="text-2xl font-bold text-textPrimary/95 group-hover:text-highlight transition-colors duration-300"
-                    >
-                      {project.title}
-                    </motion.h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="p-2 rounded-lg bg-highlight/10">
+                        <FiFolder className="text-2xl text-highlight" />
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#ccd6f6] group-hover:text-highlight transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                    </div>
                     <div className="flex-grow" />
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 mt-2 sm:mt-0">
                       <motion.a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-textSecondary hover:text-highlight transition-colors"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        className="p-2 rounded-lg bg-highlight/5 hover:bg-highlight/10 transition-colors duration-300"
                       >
-                        <FiGithub className="w-6 h-6" />
+                        <FiGithub className="w-5 h-5 text-[#ccd6f6] hover:text-highlight transition-colors" />
                       </motion.a>
                       <motion.a
                         href={project.external}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-textSecondary hover:text-highlight transition-colors"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        className="p-2 rounded-lg bg-highlight/5 hover:bg-highlight/10 transition-colors duration-300"
                       >
-                        <FiExternalLink className="w-6 h-6" />
+                        <FiExternalLink className="w-5 h-5 text-[#ccd6f6] hover:text-highlight transition-colors" />
                       </motion.a>
                     </div>
                   </div>
 
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                    className="text-textPrimary/95 text-lg mb-6 leading-relaxed font-medium"
-                  >
+                  <p className="text-[#a8b2d1] text-base sm:text-lg mb-6 leading-relaxed font-medium">
                     {project.description}
-                  </motion.p>
+                  </p>
 
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    className="flex flex-wrap gap-3"
-                  >
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {project.tech.map((tech, i) => (
                       <motion.span
                         key={i}
                         whileHover={{ 
-                          scale: 1.1,
+                          scale: 1.05,
                           y: -2,
-                          color: "#64ffda",
-                          textShadow: "0 0 8px rgba(100, 255, 218, 0.3)"
                         }}
-                        className="text-textPrimary/90 text-sm font-mono px-3 py-1 rounded-full bg-highlight/5 border border-highlight/10 hover:border-highlight/30 transition-colors"
+                        className="text-[#ccd6f6] text-xs sm:text-sm font-mono px-3 py-1.5 rounded-full bg-highlight/5 border border-highlight/20 hover:border-highlight/40 hover:bg-highlight/10 transition-all duration-300"
                       >
                         {tech}
                       </motion.span>
                     ))}
-                  </motion.div>
+                  </div>
                 </div>
               </motion.div>
             ))}
