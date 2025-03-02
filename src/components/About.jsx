@@ -3,21 +3,21 @@ import { FiCode, FiCpu, FiZap } from 'react-icons/fi';
 
 const About = () => {
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [0, 0.5, 1]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1]);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 1, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -69,7 +69,7 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-4xl mx-auto"
         >
           <motion.div 
@@ -109,7 +109,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
+                className="text-[#ccd6f6] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-medium tracking-wide bg-transparent mix-blend-normal"
               >
                 My journey into the world of blockchain and Web3 began with a fascination for decentralized systems 
                 and their potential to revolutionize the digital landscape. As a computer science student, I've always 
@@ -118,7 +118,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
+                className="text-[#ccd6f6] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-medium tracking-wide bg-transparent mix-blend-normal"
               >
                 Beyond coding, I'm passionate about contributing to the Web3 ecosystem and building solutions that 
                 make blockchain technology more accessible to everyone. I believe in the power of decentralized 
@@ -127,7 +127,7 @@ const About = () => {
               <motion.p
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="text-[#ffffff] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-bold tracking-wide"
+                className="text-[#ccd6f6] text-lg leading-relaxed pl-4 border-l-2 border-highlight/20 hover:border-highlight transition-all duration-300 font-medium tracking-wide bg-transparent mix-blend-normal"
               >
                 When I'm not coding, you'll find me exploring new blockchain protocols, participating in hackathons, 
                 or sharing my knowledge with the developer community through technical articles and open-source 
@@ -140,7 +140,7 @@ const About = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="bg-[#0a192f] p-8 rounded-lg shadow-card relative overflow-hidden group"
+              className="bg-[#0a192f] p-8 rounded-lg shadow-lg relative overflow-hidden group border border-highlight/10 mix-blend-normal"
             >
               {/* Animated gradient background */}
               <motion.div
@@ -174,7 +174,7 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <motion.div
-                    className="group relative overflow-hidden rounded-lg bg-[#112240] p-6 transition-all duration-300 hover:shadow-highlight"
+                    className="group relative overflow-hidden rounded-lg bg-[#0a192f] p-6 transition-all duration-300 hover:shadow-highlight border border-highlight/10 mix-blend-normal"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
@@ -193,18 +193,18 @@ const About = () => {
                         >
                           <FiCode className="text-2xl text-highlight" />
                         </motion.div>
-                        <h4 className="text-xl font-bold text-[#ffffff] group-hover:text-highlight transition-colors tracking-wide">
+                        <h4 className="text-xl font-bold text-[#ccd6f6] group-hover:text-highlight transition-colors tracking-wide">
                           Solana Development
                         </h4>
                       </div>
-                      <p className="text-[#ffffff] text-lg font-bold tracking-wide">
+                      <p className="text-[#ccd6f6] text-lg font-medium tracking-wide">
                         Building decentralized applications on the fastest blockchain, exploring Solana's unique architecture and ecosystem.
                       </p>
                     </div>
                   </motion.div>
 
                   <motion.div
-                    className="group relative overflow-hidden rounded-lg bg-[#112240] p-6 transition-all duration-300 hover:shadow-highlight"
+                    className="group relative overflow-hidden rounded-lg bg-[#0a192f] p-6 transition-all duration-300 hover:shadow-highlight border border-highlight/10 mix-blend-normal"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
@@ -223,11 +223,11 @@ const About = () => {
                         >
                           <FiCpu className="text-2xl text-highlight" />
                         </motion.div>
-                        <h4 className="text-xl font-bold text-[#ffffff] group-hover:text-highlight transition-colors tracking-wide">
+                        <h4 className="text-xl font-bold text-[#ccd6f6] group-hover:text-highlight transition-colors tracking-wide">
                           AI Development
                         </h4>
                       </div>
-                      <p className="text-[#ffffff] text-lg font-bold tracking-wide">
+                      <p className="text-[#ccd6f6] text-lg font-medium tracking-wide">
                         Creating intelligent solutions with Eliza, focusing on AI integration in blockchain applications.
                       </p>
                     </div>

@@ -165,7 +165,7 @@ const Hero = () => {
               { icon: FiGithub, link: "https://github.com/manish2889", label: "GitHub" },
               { icon: FiLinkedin, link: "https://www.linkedin.com/in/manishgowda", label: "LinkedIn" },
               { icon: FiMail, link: "mailto:manishr9844@gmail.com", label: "Email" },
-              { icon: FiTwitter, link: "https://x.com/0xmanishr", label: "Twitter" },
+              { icon: FiTwitter, link: "https://x.com/0xmanishr", label: "Twitter/X" },
               { icon: FiMessageSquare, link: "https://telegram.dog/Oxmanishr", label: "Telegram" }
             ].map(({ icon: Icon, link, label }, i) => (
               <motion.a

@@ -38,21 +38,21 @@ const skillCategories = [
 
 const Skills = () => {
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0.2, 0.3, 0.4], [0, 0.5, 1]);
-  const scale = useTransform(scrollYProgress, [0.2, 0.3], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1]);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 1, scale: 0.95 },
     visible: {
       opacity: 1,
       scale: 1,
@@ -65,7 +65,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-card relative overflow-hidden">
+    <section id="skills" className="py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -107,14 +107,14 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-4xl mx-auto"
         >
           <motion.div 
             className="flex items-center gap-4 mb-12"
           >
             <motion.span
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
               className="text-highlight font-mono text-lg"
@@ -122,10 +122,10 @@ const Skills = () => {
               02.
             </motion.span>
             <motion.h2
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1, type: "spring", stiffness: 100 }}
-              className="text-3xl font-bold text-textPrimary"
+              className="text-3xl font-bold text-[#ccd6f6]"
             >
               Skills & Technologies
             </motion.h2>
@@ -152,18 +152,18 @@ const Skills = () => {
                   stiffness: 400,
                   damping: 10
                 }}
-                className="bg-quaternary p-6 rounded-lg shadow-card relative overflow-hidden group"
+                className="bg-[#112240] p-6 rounded-lg shadow-lg relative overflow-hidden group border border-highlight/10 mix-blend-normal"
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-highlight/5 to-transparent"
-                  initial={{ opacity: 0 }}
+                  className="absolute inset-0 bg-gradient-to-br from-highlight/5 to-transparent mix-blend-normal"
+                  initial={{ opacity: 1 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 />
 
-                <div className="relative z-10">
+                <div className="relative z-10 mix-blend-normal">
                   <motion.h3
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 1 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
                     className="text-xl font-bold mb-4 text-highlight"
@@ -175,7 +175,7 @@ const Skills = () => {
                       <div key={skill.name}>
                         <motion.div 
                           className="flex justify-between mb-1"
-                          initial={{ opacity: 0, x: -20 }}
+                          initial={{ opacity: 1, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ 
                             duration: 0.5,
@@ -184,12 +184,12 @@ const Skills = () => {
                             stiffness: 100
                           }}
                         >
-                          <span className="text-textPrimary font-medium">{skill.name}</span>
+                          <span className="text-[#ccd6f6] font-medium">{skill.name}</span>
                           <span className="text-highlight">{skill.level}%</span>
                         </motion.div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
+                        <div className="h-2 bg-[#233554] rounded-full overflow-hidden">
                           <motion.div
-                            initial={{ width: 0, opacity: 0 }}
+                            initial={{ width: 0, opacity: 1 }}
                             whileInView={{ 
                               width: `${skill.level}%`,
                               opacity: 1
@@ -211,12 +211,12 @@ const Skills = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-12 text-center"
           >
-            <p className="text-textPrimary text-sm">
+            <p className="text-[#ccd6f6] text-sm">
               Currently exploring:{' '}
               <motion.span
                 whileHover={{ 
