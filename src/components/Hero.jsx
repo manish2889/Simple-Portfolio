@@ -144,7 +144,7 @@ const Hero = () => {
           />
 
           <AnimatedText
-            text="I build things for Web3."
+            text="I build things for Web3"
             className="text-3xl sm:text-5xl font-bold text-textSecondary mb-6 bg-gradient-to-r from-highlight/80 to-highlight/40 bg-clip-text text-transparent whitespace-normal break-words leading-normal sm:leading-normal px-2 sm:px-0"
           />
 
