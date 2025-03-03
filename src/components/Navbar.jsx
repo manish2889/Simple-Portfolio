@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { FiFileText } from 'react-icons/fi';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const navItems = [
@@ -9,6 +10,8 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     { name: 'Projects', href: 'projects' },
     { name: 'Contact', href: 'contact' },
   ];
+
+  const resumeLink = "https://drive.google.com/file/d/1x9EWTChzoScB8rzsQ4Sr6g8dDrk6ftlR/view?usp=sharing";
 
   return (
     <nav className="fixed w-full bg-primary/90 backdrop-blur-sm z-50 py-4 px-6 shadow-lg">
@@ -24,7 +27,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -44,6 +47,20 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 </Link>
               </motion.div>
             ))}
+            <motion.a
+              href={resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
+              className="flex items-center gap-2 px-4 py-2 border-2 border-highlight text-highlight rounded-lg hover:bg-highlight/10 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiFileText className="text-sm" />
+              <span>Resume</span>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,6 +101,16 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href={resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-highlight text-highlight rounded-lg hover:bg-highlight/10 transition-all duration-300"
+              >
+                <FiFileText className="text-sm" />
+                <span>Resume</span>
+              </a>
             </div>
           </motion.div>
         )}

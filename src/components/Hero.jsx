@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiMessageSquare, FiLink } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiMessageSquare, FiLink, FiFileText } from 'react-icons/fi';
 
 const Hero = () => {
   const containerVariants = {
@@ -76,6 +76,8 @@ const Hero = () => {
     </motion.div>
   );
 
+  const resumeLink = "https://drive.google.com/file/d/1x9EWTChzoScB8rzsQ4Sr6g8dDrk6ftlR/view?usp=sharing";
+
   return (
     <section className="min-h-screen flex items-center justify-center py-16 sm:py-32 relative overflow-hidden">
       {/* Animated background shapes */}
@@ -118,7 +120,7 @@ const Hero = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="mb-8"
+            className="mb-8 flex items-center gap-4"
           >
             <motion.a
               href="https://linktr.ee/manishrgowda"
@@ -130,6 +132,17 @@ const Hero = () => {
             >
               <FiLink className="text-sm animate-pulse" />
               <span className="text-sm font-mono">All Links</span>
+            </motion.a>
+            <motion.a
+              href={resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-highlight/10 text-highlight rounded-full hover:bg-highlight/20 transition-all duration-300 transform hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiFileText className="text-sm animate-pulse" />
+              <span className="text-sm font-mono">Resume</span>
             </motion.a>
           </motion.div>
 
@@ -161,6 +174,22 @@ const Hero = () => {
             className="flex flex-wrap gap-4 justify-center sm:justify-start"
             variants={containerVariants}
           >
+            <motion.a
+              href={resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              custom={-1}
+              variants={socialVariants}
+              className="flex items-center gap-2 px-6 py-3 bg-highlight text-primary rounded-lg hover:bg-highlight/90 transition-all duration-300 font-semibold"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '0 0 20px rgba(100, 255, 218, 0.3)'
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiFileText className="text-xl" />
+              View Resume
+            </motion.a>
             {[
               { icon: FiGithub, link: "https://github.com/manish2889", label: "GitHub" },
               { icon: FiLinkedin, link: "https://www.linkedin.com/in/manishgowda", label: "LinkedIn" },
