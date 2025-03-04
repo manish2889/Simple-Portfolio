@@ -76,7 +76,7 @@ const Hero = () => {
     </motion.div>
   );
 
-  const resumeLink = "https://drive.google.com/file/d/1x9EWTChzoScB8rzsQ4Sr6g8dDrk6ftlR/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/1Bu1w9vWPgZblH4iEg8qAuaz1ArlxwVAQ/view?usp=sharing";
 
   return (
     <section className="min-h-screen flex items-center justify-center py-16 sm:py-32 relative overflow-hidden">
